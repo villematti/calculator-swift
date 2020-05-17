@@ -13,7 +13,18 @@
 		6FB16A9D247183DE00F6DEDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB16A9B247183DE00F6DEDD /* Main.storyboard */; };
 		6FB16A9F247183E100F6DEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB16A9E247183E100F6DEDD /* Assets.xcassets */; };
 		6FB16AA2247183E100F6DEDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB16AA0247183E100F6DEDD /* LaunchScreen.storyboard */; };
+		6FB16AB02471909C00F6DEDD /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AAF2471909C00F6DEDD /* CalculatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FB16AB22471909C00F6DEDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FB16A8A247183DE00F6DEDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FB16A91247183DE00F6DEDD;
+			remoteInfo = Calculator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6FB16A92247183DE00F6DEDD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		6FB16A9E247183E100F6DEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FB16AA1247183E100F6DEDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FB16AA3247183E100F6DEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB16AAD2471909C00F6DEDD /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB16AAF2471909C00F6DEDD /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		6FB16AB12471909C00F6DEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6FB16A8F247183DE00F6DEDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FB16AAA2471909C00F6DEDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				6FB16A94247183DE00F6DEDD /* Calculator */,
+				6FB16AAE2471909C00F6DEDD /* CalculatorTests */,
 				6FB16A93247183DE00F6DEDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				6FB16A92247183DE00F6DEDD /* Calculator.app */,
+				6FB16AAD2471909C00F6DEDD /* CalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +88,15 @@
 				6FB16AA3247183E100F6DEDD /* Info.plist */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		6FB16AAE2471909C00F6DEDD /* CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FB16AAF2471909C00F6DEDD /* CalculatorTests.swift */,
+				6FB16AB12471909C00F6DEDD /* Info.plist */,
+			);
+			path = CalculatorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +119,24 @@
 			productReference = 6FB16A92247183DE00F6DEDD /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6FB16AAC2471909C00F6DEDD /* CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FB16AB42471909C00F6DEDD /* Build configuration list for PBXNativeTarget "CalculatorTests" */;
+			buildPhases = (
+				6FB16AA92471909C00F6DEDD /* Sources */,
+				6FB16AAA2471909C00F6DEDD /* Frameworks */,
+				6FB16AAB2471909C00F6DEDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FB16AB32471909C00F6DEDD /* PBXTargetDependency */,
+			);
+			name = CalculatorTests;
+			productName = CalculatorTests;
+			productReference = 6FB16AAD2471909C00F6DEDD /* CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +149,10 @@
 				TargetAttributes = {
 					6FB16A91247183DE00F6DEDD = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					6FB16AAC2471909C00F6DEDD = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 6FB16A91247183DE00F6DEDD;
 					};
 				};
 			};
@@ -116,6 +170,7 @@
 			projectRoot = "";
 			targets = (
 				6FB16A91247183DE00F6DEDD /* Calculator */,
+				6FB16AAC2471909C00F6DEDD /* CalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +183,13 @@
 				6FB16AA2247183E100F6DEDD /* LaunchScreen.storyboard in Resources */,
 				6FB16A9F247183E100F6DEDD /* Assets.xcassets in Resources */,
 				6FB16A9D247183DE00F6DEDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FB16AAB2471909C00F6DEDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +206,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FB16AA92471909C00F6DEDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FB16AB02471909C00F6DEDD /* CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FB16AB32471909C00F6DEDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FB16A91247183DE00F6DEDD /* Calculator */;
+			targetProxy = 6FB16AB22471909C00F6DEDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6FB16A9B247183DE00F6DEDD /* Main.storyboard */ = {
@@ -316,6 +394,46 @@
 			};
 			name = Release;
 		};
+		6FB16AB52471909C00F6DEDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNRNZ53W34;
+				INFOPLIST_FILE = CalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = talviruusu.com.CalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
+			};
+			name = Debug;
+		};
+		6FB16AB62471909C00F6DEDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNRNZ53W34;
+				INFOPLIST_FILE = CalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = talviruusu.com.CalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +451,15 @@
 			buildConfigurations = (
 				6FB16AA7247183E100F6DEDD /* Debug */,
 				6FB16AA8247183E100F6DEDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FB16AB42471909C00F6DEDD /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FB16AB52471909C00F6DEDD /* Debug */,
+				6FB16AB62471909C00F6DEDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
