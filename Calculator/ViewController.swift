@@ -11,6 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var holder: UIView!
+    
+    private var resultLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0"
+        label.textColor = .white
+        label.textAlignment = .right
+        label.font = UIFont(name: "Helvetica", size: 100)
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +88,9 @@ class ViewController: UIViewController {
             button4.setTitle(operations[x], for: .normal)
             holder.addSubview(button4)
         }
+        
+        resultLabel.frame = CGRect(x: 20, y: clearButton.frame.origin.y - 110.0, width: view.frame.width - 40, height: 100)
+        holder.addSubview(resultLabel)
     }
 
 
