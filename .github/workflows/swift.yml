@@ -3,84 +3,19 @@ name: Swift
 on: push
 
 jobs:
-  build:
-    name: Build
-    env:
-      SCHEME: "Actions"
-      DEVICE: "iPhone 11"
-      DERIVED_DATA_PATH: "DerivedData"
+  test:
+    name: Test
     runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X', 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K']
     steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Build application
-      run: |
-        set -o pipefail && xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH build-for-testing | xcpretty --color --simple
-    - name: Upload products
-      uses: actions/upload-artifact@v1
-      with:
-        name: Products
-        path: DerivedData/Build/Products
-
-  unit_test:
-    name: Unit test
-    env:
-      DEVICE: "iPhone 11"
-      DERIVED_DATA_PATH: "DerivedData"
-      UNIT_TEST_TARGET: "ActionsTests"
-    runs-on: macOS-latest
-    needs: build
-    steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Download products
-      uses: actions/download-artifact@v1
-      with:
-        name: Products
-    - name: Run unit tests
-      run: |
-        set -o pipefail && xcodebuild test-without-building -xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UNIT_TEST_TARGET | xcpretty --color --simple
-    - name: Upload test logs
-      uses: actions/upload-artifact@v1
-      with:
-        name: TestLogs
-        path: DerivedData/Logs/Test
-
-  ui_test:
-    name: UI test
-    env:
-      DEVICE: "iPhone 11"
-      DERIVED_DATA_PATH: "DerivedData"
-      UI_TEST_TARGET: "ActionsUITests"
-    runs-on: macOS-latest
-    needs: build
-    steps:
-    - name: Checkout project 
-      uses: actions/checkout@v1
-    - name: Download products
-      uses: actions/download-artifact@v1
-      with:
-        name: Products
-    - name: Run UI tests
-      run: |
-        set -o pipefail && xcodebuild test-without-building -xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UI_TEST_TARGET | xcpretty  --color --simple
-      
-  analyze:
-    name: Static analyze
-    env:
-      DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
-    runs-on: macOS-latest
-    needs: unit_test
-    steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Download test logs
-      uses: actions/download-artifact@v1
-      with:
-        name: TestLogs
-    - name: Setup bundle
-      run: |
-        bundle install
-    - name: Danger
-      run: |
-        bundle exec danger
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build and test
+        run: |
+          cd Texstyle
+          xcodebuild clean test -project Texstyle.xcodeproj -scheme Texstyle -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          bash <(curl -s https://codecov.io/bash)
+        env: 
+         destination: ${{ matrix.destination }}
