@@ -12,12 +12,16 @@ class ViewController: UIViewController {
     
     @IBOutlet var holder: UIView!
     
+    var firstNumber = 0
+    var resultNumber = 0
+    
     private var resultLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
         label.textColor = .white
         label.textAlignment = .right
         label.font = UIFont(name: "Helvetica", size: 100)
+        label.accessibilityIdentifier = "resultLabel"
         return label
     }()
 
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
         zeroButton.backgroundColor = .white
         zeroButton.setTitle("0", for: .normal)
         zeroButton.tag = 1
+        zeroButton.accessibilityIdentifier = "number0"
         zeroButton.addTarget(self, action: #selector(numberPressed(_:)), for: .touchUpInside)
         holder.addSubview(zeroButton)
         
@@ -52,6 +57,7 @@ class ViewController: UIViewController {
             button1.backgroundColor = .white
             button1.setTitle("\(x+1)", for: .normal)
             button1.tag = x + 2
+            button1.accessibilityIdentifier = "number\(x + 1)"
             button1.addTarget(self, action: #selector(numberPressed(_:)), for: .touchUpInside)
             holder.addSubview(button1)
         }
@@ -64,6 +70,7 @@ class ViewController: UIViewController {
             button2.backgroundColor = .white
             button2.setTitle("\(x+4)", for: .normal)
             button2.tag = x + 5
+            button2.accessibilityIdentifier = "number\(x + 4)"
             button2.addTarget(self, action: #selector(numberPressed(_:)), for: .touchUpInside)
             holder.addSubview(button2)
         }
@@ -76,6 +83,7 @@ class ViewController: UIViewController {
             button3.backgroundColor = .white
             button3.setTitle("\(x+7)", for: .normal)
             button3.tag = x + 8
+            button3.accessibilityIdentifier = "number\(x + 7)"
             button3.addTarget(self, action: #selector(numberPressed(_:)), for: .touchUpInside)
             holder.addSubview(button3)
         }
@@ -85,6 +93,7 @@ class ViewController: UIViewController {
         clearButton.setTitleColor(.black, for: .normal)
         clearButton.backgroundColor = .white
         clearButton.setTitle("Clear All", for: .normal)
+        clearButton.accessibilityIdentifier = "clearButton"
         holder.addSubview(clearButton)
         
         let operations = ["=","+","-","x","/"]
