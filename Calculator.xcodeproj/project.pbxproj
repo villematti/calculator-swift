@@ -15,6 +15,7 @@
 		6FB16AA2247183E100F6DEDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB16AA0247183E100F6DEDD /* LaunchScreen.storyboard */; };
 		6FB16AB02471909C00F6DEDD /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AAF2471909C00F6DEDD /* CalculatorTests.swift */; };
 		6FB16ABE2471B0A900F6DEDD /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */; };
+		6FB16ACA2471D96000F6DEDD /* NumberButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6FB16ABB2471B0A900F6DEDD /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		6FB16ABF2471B0A900F6DEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */,
 				6FB16ABF2471B0A900F6DEDD /* Info.plist */,
+				6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */,
 			);
 			path = CalculatorUITests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FB16ACA2471D96000F6DEDD /* NumberButtonUITests.swift in Sources */,
 				6FB16ABE2471B0A900F6DEDD /* CalculatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
