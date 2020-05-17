@@ -103,6 +103,7 @@ class ViewController: UIViewController {
             button4.setTitleColor(.white, for: .normal)
             button4.backgroundColor = .orange
             button4.setTitle(operations[x], for: .normal)
+            button4.accessibilityIdentifier = "\(operations[x])operation"
             holder.addSubview(button4)
         }
         

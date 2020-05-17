@@ -16,6 +16,11 @@
 		6FB16AB02471909C00F6DEDD /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AAF2471909C00F6DEDD /* CalculatorTests.swift */; };
 		6FB16ABE2471B0A900F6DEDD /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */; };
 		6FB16ACA2471D96000F6DEDD /* NumberButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */; };
+		6FB16ACE2471DD2500F6DEDD /* AddOperationButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16ACD2471DD2500F6DEDD /* AddOperationButtonUITests.swift */; };
+		6FB16AD02471DF8700F6DEDD /* SubOperationButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16ACF2471DF8700F6DEDD /* SubOperationButtonUITests.swift */; };
+		6FB16AD22471E03500F6DEDD /* MulOperationButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AD12471E03500F6DEDD /* MulOperationButtonUITests.swift */; };
+		6FB16AD42471E06600F6DEDD /* DivOperationButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AD32471E06600F6DEDD /* DivOperationButtonUITests.swift */; };
+		6FB16AD62471E08E00F6DEDD /* EqualOperationButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB16AD52471E08E00F6DEDD /* EqualOperationButtonUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		6FB16ABF2471B0A900F6DEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonUITests.swift; sourceTree = "<group>"; };
+		6FB16ACD2471DD2500F6DEDD /* AddOperationButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOperationButtonUITests.swift; sourceTree = "<group>"; };
+		6FB16ACF2471DF8700F6DEDD /* SubOperationButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOperationButtonUITests.swift; sourceTree = "<group>"; };
+		6FB16AD12471E03500F6DEDD /* MulOperationButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulOperationButtonUITests.swift; sourceTree = "<group>"; };
+		6FB16AD32471E06600F6DEDD /* DivOperationButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOperationButtonUITests.swift; sourceTree = "<group>"; };
+		6FB16AD52471E08E00F6DEDD /* EqualOperationButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualOperationButtonUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +137,11 @@
 				6FB16ABD2471B0A900F6DEDD /* CalculatorUITests.swift */,
 				6FB16ABF2471B0A900F6DEDD /* Info.plist */,
 				6FB16AC92471D96000F6DEDD /* NumberButtonUITests.swift */,
+				6FB16ACD2471DD2500F6DEDD /* AddOperationButtonUITests.swift */,
+				6FB16ACF2471DF8700F6DEDD /* SubOperationButtonUITests.swift */,
+				6FB16AD12471E03500F6DEDD /* MulOperationButtonUITests.swift */,
+				6FB16AD32471E06600F6DEDD /* DivOperationButtonUITests.swift */,
+				6FB16AD52471E08E00F6DEDD /* EqualOperationButtonUITests.swift */,
 			);
 			path = CalculatorUITests;
 			sourceTree = "<group>";
@@ -281,7 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FB16ACA2471D96000F6DEDD /* NumberButtonUITests.swift in Sources */,
+				6FB16AD62471E08E00F6DEDD /* EqualOperationButtonUITests.swift in Sources */,
+				6FB16ACE2471DD2500F6DEDD /* AddOperationButtonUITests.swift in Sources */,
+				6FB16AD02471DF8700F6DEDD /* SubOperationButtonUITests.swift in Sources */,
 				6FB16ABE2471B0A900F6DEDD /* CalculatorUITests.swift in Sources */,
+				6FB16AD22471E03500F6DEDD /* MulOperationButtonUITests.swift in Sources */,
+				6FB16AD42471E06600F6DEDD /* DivOperationButtonUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
